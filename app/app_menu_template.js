@@ -4,13 +4,13 @@ const c = require('./constants');
 const Helper = require('./helper');
 
 // create menu template
-const menuTemplate = function(mainWindow) {
+const menuTemplate = function (mainWindow) {
   // Helper function for loading URLs
-  const loadRelativeUrl = function(url) {
+  const loadRelativeUrl = function (url) {
     if (Helper.isUsingShell()) {
       mainWindow.webContents.send(
-          'shell:loadUrl',
-          url
+        'shell:loadUrl',
+        url
       );
     } else {
       mainWindow.loadRelativeUrl(url);
@@ -19,27 +19,27 @@ const menuTemplate = function(mainWindow) {
 
   const template = [
     {
-      label: c.menu.leasing.label,
+      label: c.menu.categories.label,
       submenu: [
         {
-          label: c.menu.leasing.car,
+          label: c.menu.categories.home,
           accelerator: 'CmdOrCtrl+B',
           click() {
             loadRelativeUrl('/');
           }
         },
         {
-          label: c.menu.leasing.movables,
+          label: c.menu.categories.tutorials,
           accelerator: 'CmdOrCtrl+N',
           click() {
-            loadRelativeUrl('/mobilien-rechner');
+            loadRelativeUrl('/tutorials');
           }
         },
         {
-          label: c.menu.leasing.inquiry,
+          label: c.menu.categories.hacks,
           accelerator: 'CmdOrCtrl+L',
           click() {
-            loadRelativeUrl('/angebot');
+            loadRelativeUrl('/hacks');
           }
         },
       ],
@@ -97,13 +97,13 @@ const menuTemplate = function(mainWindow) {
         */
         {
           label: c.menu.view.fullscreen,
-          accelerator: (function() {
+          accelerator: (function () {
             if (process.platform === 'darwin')
               return 'Ctrl+Command+F';
             else
               return 'F11';
           })(),
-          click: function(item, focusedWindow) {
+          click: function (item, focusedWindow) {
             if (focusedWindow)
               focusedWindow.setFullScreen(!focusedWindow.isFullScreen());
           }
@@ -146,13 +146,13 @@ const menuTemplate = function(mainWindow) {
       submenu: [
         {
           label: c.menu.app.about + ' ' + c.settings.appName,
-          click: function() {
+          click: function () {
             loadRelativeUrl('/ueber-uns');
           }
         },
         {
           label: c.menu.help.contact,
-          click: function() {
+          click: function () {
             loadRelativeUrl('/kontakt');
           }
         },
@@ -202,12 +202,12 @@ const menuTemplate = function(mainWindow) {
         {
           label: c.menu.app.quit,
           accelerator: 'Command+Q',
-          click: function() { app.quit(); }
+          click: function () { app.quit(); }
         },
       ]
     });
 
-    const windowMenu = template.find(function(menu) {return menu.role === 'window'});
+    const windowMenu = template.find(function (menu) { return menu.role === 'window' });
     if (windowMenu) {
       windowMenu.submenu.push(
         {
@@ -227,7 +227,7 @@ const menuTemplate = function(mainWindow) {
         {
           label: c.menu.app.quit,
           accelerator: 'Ctrl+Q',
-          click: function() { app.quit(); }
+          click: function () { app.quit(); }
         },
       ]
     });
@@ -240,25 +240,25 @@ const menuTemplate = function(mainWindow) {
     template.push({
       label: 'Development',
       submenu: [
-        {role: 'reload'},
-        {role: 'forcereload'},
-        {role: 'toggledevtools'},
-        {type: 'separator'},
-        {role: 'resetzoom'},
-        {role: 'zoomin'},
-        {role: 'zoomout'},
-        {type: 'separator'},
-        {role: 'togglefullscreen'},
-        {type: 'separator'},
-        {role: 'undo'},
-        {role: 'redo'},
-        {type: 'separator'},
-        {role: 'cut'},
-        {role: 'copy'},
-        {role: 'paste'},
-        {role: 'pasteandmatchstyle'},
-        {role: 'delete'},
-        {role: 'selectall'},
+        { role: 'reload' },
+        { role: 'forcereload' },
+        { role: 'toggledevtools' },
+        { type: 'separator' },
+        { role: 'resetzoom' },
+        { role: 'zoomin' },
+        { role: 'zoomout' },
+        { type: 'separator' },
+        { role: 'togglefullscreen' },
+        { type: 'separator' },
+        { role: 'undo' },
+        { role: 'redo' },
+        { type: 'separator' },
+        { role: 'cut' },
+        { role: 'copy' },
+        { role: 'paste' },
+        { role: 'pasteandmatchstyle' },
+        { role: 'delete' },
+        { role: 'selectall' },
       ]
     });
   }

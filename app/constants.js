@@ -1,7 +1,7 @@
 const Constants = {
   settings: {
-    appName: 'Leasingrechner',
-    appUrl: 'https://www.leasingrechnen.at', // without trailing slash!
+    appName: 'NewAgeSoldier',
+    appUrl: 'https://newagesoldier.com', // without trailing slash!
     nodeIntegrationEnabled: false, // keep disabled unless you run into ipcRenderer-specific troubles
     enableDevMenu: false, // enable for dev-builds only!
     userAgentPostfixWindows: 'WindowsApp', // custom user agent postfixes to distinguish traffic in Analytics
@@ -18,60 +18,60 @@ const Constants = {
     useLinuxShell: false,     // all 3 require 'nodeIntegrationEnabled: true'.
   },
   mainWindow: {
-    width: 600,
+    width: 1400,
     height: 860,
     largeWidth: 1220,
     largeHeight: 860,
   },
   strings: {
-    open: 'Öffnen',
+    open: 'Open',
   },
   menu: {
     app: {
-      about: 'Über',
-      quit: 'Beenden',
-      hide: 'verbergen',
-      hideothers: 'Andere verbergen',
-      unhide: 'Alle anzeigen',
+      about: 'About',
+      quit: 'Quit',
+      hide: 'Hide',
+      hideothers: 'Hide Others',
+      unhide: 'Un-Hide',
     },
     file: {
-      label: 'Datei',
+      label: 'File',
     },
     edit: {
-      label: 'Bearbeiten',
-      undo: 'Rückgänging',
-      redo: 'Wiederholen',
-      cut: 'Ausschneiden',
-      copy: 'Kopieren',
-      paste: 'Einfügen',
-      selectall: 'Alles auswählen'
+      label: 'Edit',
+      undo: 'Undo',
+      redo: 'Redo',
+      cut: 'Cut',
+      copy: 'Copy',
+      paste: 'Paste',
+      selectall: 'Select All'
     },
     view: {
-      label: 'Ansicht',
-      fullscreen: 'Vollbild de-/aktivieren'
+      label: 'View',
+      fullscreen: 'Fullscreen'
     },
     window: {
-      label: 'Fenster',
-      minimize: 'Minimieren',
-      close: 'Schließen',
-      front: 'Alle in den Vordergrund',
+      label: 'Window',
+      minimize: 'Minimize',
+      close: 'Close',
+      front: 'Front',
     },
     help: {
-      label: 'Hilfe',
-      contact: 'Kontakt'
+      label: 'Help',
+      contact: 'Contact'
     },
-    leasing: {
-      label: 'Berechnen',
-      car: 'Kfz Leasing berechnen',
-      movables: 'Mobilien Leasing berechnen',
-      inquiry: 'Leasing Angebot anfordern',
+    categories: {
+      label: 'Categories',
+      home: 'Home',
+      tutorials: 'Tutorials',
+      hacks: 'Hacks',
     },
   },
   touchBar: {
-    label: 'Leasing',
-    car: 'Kfz Rechner',
-    movables: 'Mobilien Rechner',
-    inquiry: 'Angebot anfordern',
+    label: 'Categories',
+    home: 'Home',
+    tutorials: 'Tutorials',
+    hacks: 'Hacks',
   }
 };
 

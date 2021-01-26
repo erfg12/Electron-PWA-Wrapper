@@ -19,6 +19,7 @@
     "pack": "electron-builder --dir",
     "dist": "electron-builder",
     "build": "./node_modules/.bin/electron-builder build",
+    "build_exe": "electron-packager ./ NewAgeSoldier --platform=win32 --arch=x64",
     "postinstall": "electron-builder install-app-deps"
   },
   "devDependencies": {

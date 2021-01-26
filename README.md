@@ -1,4 +1,12 @@
-# Electron PWA Wrapper
+This is for the NewAgeSoldier.com website.
+
+To test: `npm install && npm run electron`
+
+To build: `npm run build` or `npm run build_exe`
+
+### Old
+
+```# Electron PWA Wrapper
 
 A sample wrapper app to package your Progressive Web App into a Desktop Application using [Electron](https://github.com/electron/electron), [Electon-Builder](https://github.com/electron-userland/electron-builder) and [Photon](https://github.com/connors/photon).
 
@@ -90,3 +98,4 @@ Electron-PWA-Wrapper comes with *electron-builder* preconfigured for macOS (dmg,
 ## License
 [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) - if you use it, we wanna see it!
 Other licensing options are available on inquiry.
+```
